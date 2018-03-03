@@ -5,7 +5,16 @@
 #### Initial setup
 
 > ```
-> sudo apt install htop git`
+> sudo apt install htop git pm-utils`
+> ```
+
+#### Power
+
+> ```
+> sudo poweroff
+> sudo reboot
+> sudo pm-suspend
+> sudo shutdown
 > ```
 
 ## Maintenance
@@ -62,13 +71,29 @@
 #### IntelliJ and WebStorm
 
 > ```
->
+> wget https://download.jetbrains.com/idea/ideaIC-2017.3.4.tar.gz
+> tar zxvf ideaIC-2017.3.4.tar.gz
 > ```
 
 #### C++
 
 > ```
 > sudo apt install g++
+> ```
+
+#### C#
+
+> ```
+> http://www.mono-project.com/download/stable/
+> ```
+
+#### Jenkins
+
+> ```
+> https://www.digitalocean.com/community/tutorials/how-to-install-jenkins-on-ubuntu-16-04
+> 
+> wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+> sudo apt install jenkins
 > ```
 
 
