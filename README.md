@@ -5,7 +5,7 @@
 #### Initial setup
 
 > ```
-> sudo apt install htop git pm-utils`
+> sudo apt install htop git curl pm-utils`
 > ```
 
 #### Power
@@ -30,15 +30,31 @@
 > sudo apt clean
 > ```
 
-#### Java
+#### Java 8
 
 > ```
 > wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-x64.tar.gz
 > wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jre-8u162-linux-x64.tar.gz
+> tar zxvf jdk-8u162-linux-x64.tar.gz
+> tar zxvf jre-8u162-linux-x64.tar.gz
 > sudo cp -avr jdk1.8.0_162 jre1.8.0_162 /opt
 > sudo update-alternatives --install /usr/bin/java java /opt/jdk1.8.0_162/bin/java 100
 > sudo update-alternatives --install /usr/bin/javac javac /opt/jdk1.8.0_162/bin/java 100
 > sudo update-alternatives --install /usr/bin/java java /opt/jre1.8.0_162/bin/java 100
+> java -version
+> ```
+
+#### Java 9
+
+> ```
+> wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
+> wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jre-9.0.4_linux-x64_bin.tar.gz
+> tar zxvf jdk-9.0.4_linux-x64_bin.tar.gz
+> tar zxvf jre-9.0.4_linux-x64_bin.tar.gz
+> sudo cp -avr jdk-9.0.4 jre-9.0.4 /opt
+> sudo update-alternatives --install /usr/bin/java java /opt/jdk-9.0.4/bin/java 100
+> sudo update-alternatives --install /usr/bin/javac javac /opt/jdk-9.0.4/bin/java 100
+> sudo update-alternatives --install /usr/bin/java java /opt/jre-9.0.4/bin/java 100
 > java -version
 > ```
 
@@ -66,6 +82,24 @@
 > ```
 > npm init
 > npm -v
+> ```
+
+#### Lamp server
+
+> ```
+> 
+> ```
+
+#### Atom
+
+> ```
+> wget https://atom.io/download/deb
+> ```
+
+#### Eclipse
+
+> ```
+> wget http://mirror.switch.ch/eclipse/oomph/epp/oxygen/R2/eclipse-inst-linux64.tar.gz
 > ```
 
 #### IntelliJ and WebStorm
