@@ -30,6 +30,14 @@
 > sudo apt clean
 > ```
 
+#### Distro Upgrade
+
+> ```
+> https://help.ubuntu.com/lts/serverguide/installing-upgrading.html
+> 
+> do-release-upgrade
+> ```
+
 #### Java 8
 
 > ```
@@ -49,9 +57,8 @@
 > ```
 > wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jdk-9.0.4_linux-x64_bin.tar.gz
 > wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/9.0.4+11/c2514751926b4512b076cc82f959763f/jre-9.0.4_linux-x64_bin.tar.gz
-> tar zxvf jdk-9.0.4_linux-x64_bin.tar.gz
-> tar zxvf jre-9.0.4_linux-x64_bin.tar.gz
-> sudo cp -avr jdk-9.0.4 jre-9.0.4 /opt
+> sudo tar zxvf jdk-9.0.4_linux-x64_bin.tar.gz -C /opt/
+> sudo tar zxvf jre-9.0.4_linux-x64_bin.tar.gz -C /opt/
 > sudo update-alternatives --install /usr/bin/java java /opt/jdk-9.0.4/bin/java 100
 > sudo update-alternatives --install /usr/bin/javac javac /opt/jdk-9.0.4/bin/java 100
 > sudo update-alternatives --install /usr/bin/java java /opt/jre-9.0.4/bin/java 100
@@ -106,7 +113,28 @@
 
 > ```
 > wget https://download.jetbrains.com/idea/ideaIC-2017.3.4.tar.gz
-> tar zxvf ideaIC-2017.3.4.tar.gz
+> sudo tar zxvf ideaIC-2017.3.4.tar.gz -C /opt/
+> sudo touch jetbrains-idea-ce.desktop
+> 
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=IntelliJ IDEA Community Edition
+Icon=/opt/idea-IC-173.4548.28/bin/idea.png
+Exec="/opt/idea-IC-173.4548.28/bin/idea.sh" %f
+Comment=The Drive to Develop
+Categories=Development;IDE;
+Terminal=false
+StartupWMClass=jetbrains-idea-ce
+> 
+> sudo mv ~/jetbrains-idea-ce.desktop /usr/share/applications/
+> ```
+
+#### Sublime Text 3
+
+> ```
+> wget https://download.sublimetext.com/sublime_text_3_build_3143_x64.tar.bz2
+> sudo tar xjvf sublime_text_3_build_3143_x64.tar.bz2 -C /opt/
 > ```
 
 #### C++
@@ -119,6 +147,24 @@
 
 > ```
 > http://www.mono-project.com/download/stable/
+> ```
+
+#### Apache
+
+> ```
+> sudo apt install apache2
+> ```
+
+#### MySQL
+
+> ```
+> sudo apt install mysql-server
+> ```
+
+#### PHP 7
+
+> ```
+> sudo apt install php7.0 libapache2-mod-php php-mcrypt php-mysql
 > ```
 
 #### Jenkins
